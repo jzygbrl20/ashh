@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hi BEBE 😳</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #fff0f5;
+      color: #ff007f;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    h1 {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.5em;
+    }
+
+    .btn {
+      font-size: 1.2em;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all 0.2s ease-in-out;
+    }
+
+    #yesBtn {
+      background-color: #ff69b4;
+      color: white;
+    }
+
+    #noBtn {
+      background-color: #ffd1dc;
+      color: #ff007f;
+      position: relative;
+    }
+
+    .no-row {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1>HI BEBE</h1>
+  <p>Do you like me?</p>
+
+  <button id="yesBtn" class="btn" onclick="location.href='yes.html'">Yes</button>
+  <button id="noBtn" class="btn">No</button>
+
+  <div id="noRows"></div>
+
+  <footer>
+    Created by Rence.
+  </footer>
+
+  <script>
+    const noBtn = document.getElementById('noBtn');
+    const noRows = document.getElementById('noRows');
+
+    noBtn.addEventListener('mouseenter', () => {
+      const row = document.createElement('div');
+      row.className = 'no-row';
+      row.textContent = 'No '.repeat(20);
+      noRows.appendChild(row);
+
+      // Optional: Make button move
+      noBtn.style.top = Math.random() * 100 - 50 + 'px';
+      noBtn.style.left = Math.random() * 100 - 50 + 'px';
+    });
+  </script>
+</body>
+</html>
